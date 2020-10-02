@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista Tareas</title>
+</head>
+<body>
+<a th:href="@{/tarea/Formulario}">Crear nueva tarea</a>
+<h1>Mi lista de Tareas</h1>
+<table>
+    <tr>
+        <th>Nombre</th>
+        <th>fecha Creación</th>
+        <th>Fecha Caducidad</th>
+    </tr>
+    <tr th:each="producto : ${lista}">
+        <td th:text="${tarea.nombre}">AD</td>
+        <td th:text="${tarea.fechaCreacion}">20/09/20</td>
+        <td th:text="${tarea.fechaCaducidad}">21/10/21</td>
+    </tr>
+</table>
+
+
+</body>
+</html>
